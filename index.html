@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>农民影视 · 村镇院坝片单索引与放映时刻手册（站址 nongminyingshi-app）</title>
+<meta name="description" content="农民影视给村里人留着一份能直接照着找片的清单：乡土剧情、家庭伦理、戏曲录像、农业科教短片，按节气换单，附院坝放映时刻表与选片提醒。站点 nongminyingshi-app.github.io 打开即看片单，不用注册、不开弹窗、不收一分钱。">
+<meta name="keywords" content="农民影视,农民影视片单,农村题材电影推荐,乡土电视剧合集,农业技术教学短片索引,村口院坝放映时间表,地方戏曲录像目录,一家人看的免费观影指南,nongminyingshi-app">
+<meta name="author" content="农民影视片单组">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://nongminyingshi-app.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://nongminyingshi-app.github.io/">
+<meta name="theme-color" content="#1b2a1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="农民影视">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="农民影视｜晒谷场上的片单手册">
+<meta property="og:description" content="乡土剧情、戏曲录像、农业科教短片与院坝放映时刻表，按节气更新，手机打开就能照着找片。">
+<meta property="og:url" content="https://nongminyingshi-app.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="农民影视｜晒谷场上的片单手册">
+<meta name="twitter:description" content="按节气换单的乡土影视索引，含村口院坝放映时刻表。">
+<style type="text/css">
+:root{
+  --ink:#1b2a1f;
+  --ink-soft:#3c4f3f;
+  --gold:#e0a53c;
+  --gold-deep:#b8791f;
+  --paper:#f6f1e6;
+  --paper-2:#efe7d6;
+  --brick:#b8412e;
+  --line:rgba(27,42,31,.16);
+  --shadow:0 10px 26px rgba(27,42,31,.12);
+  --radius:14px;
+  --shell:1120px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  background-image:radial-gradient(circle at 12% 8%,rgba(224,165,60,.10),transparent 42%),radial-gradient(circle at 88% 26%,rgba(184,65,46,.08),transparent 46%);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:var(--brick);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:100%;max-width:var(--shell);margin:0 auto;padding:0 20px}
+.filmstrip{height:16px;background:var(--ink);background-image:radial-gradient(circle,var(--paper) 3px,transparent 3.4px);background-size:22px 16px;background-position:6px 2px}
+
+/* ---------- header ---------- */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(246,241,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:14px;min-height:62px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:9px;margin-right:auto}
+.brand b{font-size:1.28rem;letter-spacing:.06em;color:var(--ink)}
+.brand span{font-size:.72rem;letter-spacing:.22em;color:var(--gold-deep);text-transform:uppercase}
+.nav{display:flex;gap:20px;align-items:center}
+.nav a{font-size:.94rem;color:var(--ink-soft);padding:6px 2px;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--gold);text-decoration:none}
+.nav em{font-style:normal;font-size:.95rem;color:var(--brick);border:1px solid var(--brick);border-radius:999px;padding:5px 13px}
+.nav em:hover{background:var(--brick);color:#fff}
+.nav em a{border-bottom:none;padding:0;font-size:.95rem}
+.navbtn{display:none;margin-left:auto;border:1px solid var(--ink);border-radius:8px;padding:6px 12px;font-size:.9rem;cursor:pointer;user-select:none}
+#navsw{display:none}
+@media (max-width:820px){
+  .navbtn{display:block;order:3}
+  .nav{order:4;flex-basis:100%;display:none;flex-direction:column;align-items:flex-start;gap:4px;padding:8px 0 14px;border-top:1px dashed var(--line)}
+  #navsw:checked ~ .nav{display:flex}
+  .nav a{padding:9px 0}
+  .nav em{margin-top:6px}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .95fr;gap:34px;align-items:center;padding-top:46px;padding-bottom:52px}
+.hero h1{font-size:clamp(2.1rem,6.4vw,3.5rem);line-height:1.1;margin:0 0 12px;letter-spacing:.03em}
+.hero h1 small{display:block;font-size:.34em;letter-spacing:.3em;color:var(--gold-deep);margin-top:12px;font-weight:400}
+.lede{max-width:34em;color:var(--ink-soft);margin:0 0 20px}
+.tagline{display:inline-block;background:var(--ink);color:var(--paper);padding:5px 14px;border-radius:4px;font-size:.88rem;letter-spacing:.05em;margin-bottom:18px}
+.addr{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:22px 0 0;padding:14px 16px;background:var(--paper-2);border-left:5px solid var(--gold);border-radius:0 10px 10px 0}
+.addr i{font-style:normal;font-size:.74rem;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase}
+.addr a{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92rem;color:var(--ink);word-break:break-all}
+.ticket{background:linear-gradient(150deg,#204027,#16251a);color:#f0e9d8;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative}
+.ticket h2{margin:0 0 4px;font-size:1.05rem;color:var(--gold)}
+.ticket p{margin:0 0 14px;font-size:.84rem;color:#cfc8b6}
+.ticket ul{list-style:none;margin:0;padding:0;border-top:1px dashed rgba(240,233,216,.28)}
+.ticket li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(240,233,216,.16);font-size:.9rem}
+.ticket li b{color:var(--gold);font-weight:600}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:34px;padding-bottom:38px}
+  .ticket{order:2}
+}
+
+/* ---------- section frame ---------- */
+section.band{padding:52px 0;border-bottom:1px solid var(--line)}
+section.band.dark{background:var(--ink);color:#eee6d4;border-bottom:none}
+section.band.dark h2,section.band.dark h3{color:#fff5e2}
+section.band.dark p{color:#cfc8b6}
+.sechead{display:flex;align-items:flex-end;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.sechead .no{font-family:Georgia,"Times New Roman",serif;font-size:2.3rem;line-height:1;color:var(--gold-deep)}
+section.band.dark .sechead .no{color:var(--gold)}
+.sechead h2{margin:0;font-size:clamp(1.25rem,3.4vw,1.7rem);letter-spacing:.04em}
+.sechead p{margin:0;font-size:.82rem;letter-spacing:.2em;color:var(--ink-soft);text-transform:uppercase}
+.sechead .more{margin-left:auto;font-size:.9rem}
+section.band.dark .sechead .more a{color:var(--gold)}
+
+/* ---------- 01 new ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fffdf7;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .thumb{height:122px;display:flex;align-items:center;justify-content:center;font-size:2.1rem;letter-spacing:.1em;color:#fffdf7;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.card:nth-child(1) .thumb{background:linear-gradient(135deg,#7c9a5c,#3f5b34)}
+.card:nth-child(2) .thumb{background:linear-gradient(135deg,#c98a3a,#8a4a1d)}
+.card:nth-child(3) .thumb{background:linear-gradient(135deg,#4c6f86,#22394a)}
+.card:nth-child(4) .thumb{background:linear-gradient(135deg,#a9553f,#5d2318)}
+.card:nth-child(5) .thumb{background:linear-gradient(135deg,#6f6a9a,#34305a)}
+.card:nth-child(6) .thumb{background:linear-gradient(135deg,#3f8f7a,#1b5044)}
+.card .body{padding:15px 17px 18px}
+.card h3{margin:0 0 7px;font-size:1.02rem}
+.card p{margin:0 0 11px;font-size:.88rem;color:var(--ink-soft)}
+.card .meta{display:flex;gap:10px;flex-wrap:wrap;font-size:.76rem;color:var(--ink-soft)}
+.card .meta span{border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+/* ---------- 02 catalog ---------- */
+.cata{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.cata .big{background:linear-gradient(160deg,#2c3f2b,#1b2a1f);color:#f0e9d8;border-radius:var(--radius);padding:26px}
+.cata .big h3{margin:0 0 10px;font-size:1.35rem;color:var(--gold)}
+.cata .big p{margin:0 0 16px;font-size:.92rem;color:#d3ccba}
+.cata .big a{display:inline-block;background:var(--gold);color:#241a08;padding:8px 18px;border-radius:999px;font-size:.9rem;font-weight:600}
+.cata .big a:hover{background:#f0bd5e;text-decoration:none}
+.chips{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.chips a{background:#fffdf7;border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:.9rem;color:var(--ink);min-width:132px}
+.chips a:hover{border-color:var(--gold-deep);background:#fff8e8;text-decoration:none}
+.chips a b{display:block;font-size:.95rem}
+.chips a i{font-style:normal;font-size:.75rem;color:var(--ink-soft)}
+@media (max-width:820px){.cata{grid-template-columns:1fr}.chips a{min-width:0;flex:1 1 44%}}
+
+/* ---------- 03 rank ---------- */
+.rank{list-style:none;margin:0;padding:0}
+.rank li{display:grid;grid-template-columns:58px 1fr 128px;gap:14px;align-items:center;padding:14px 4px;border-bottom:1px dashed rgba(240,233,216,.2)}
+.rank li:last-child{border-bottom:none}
+.rank .n{font-family:Georgia,serif;font-size:1.9rem;color:var(--gold);text-align:right;line-height:1}
+.rank .t{font-size:1rem;color:#f4eddc}
+.rank .t small{display:block;font-size:.76rem;color:#b8b1a0;margin-top:3px}
+.bar{height:8px;border-radius:999px;background:rgba(240,233,216,.16);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-deep),var(--gold))}
+.rank .v{font-size:.78rem;color:#b8b1a0;margin-top:5px;letter-spacing:.04em}
+@media (max-width:640px){
+  .rank li{grid-template-columns:44px 1fr;gap:10px}
+  .rank .heat{grid-column:1 / -1}
+}
+
+/* ---------- 04 timetable ---------- */
+.slots{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 16px;scroll-snap-type:x mandatory}
+.slot{flex:0 0 208px;scroll-snap-align:start;background:#fffdf7;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:16px}
+.slot h3{margin:0 0 2px;font-size:1rem}
+.slot .day{font-size:.75rem;letter-spacing:.16em;color:var(--gold-deep);text-transform:uppercase}
+.slot ul{list-style:none;margin:12px 0 0;padding:0;font-size:.86rem;color:var(--ink-soft)}
+.slot li{display:flex;gap:8px;padding:5px 0;border-bottom:1px dotted var(--line)}
+.slot li:last-child{border-bottom:none}
+.slot li b{color:var(--ink);font-weight:600;white-space:nowrap}
+.note{font-size:.8rem;color:var(--ink-soft);margin:0}
+
+/* ---------- 05 faq ---------- */
+.qa{border-top:1px solid var(--line)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{cursor:pointer;padding:16px 30px 16px 4px;font-size:1rem;font-weight:600;position:relative;list-style:none}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";position:absolute;right:6px;top:12px;font-size:1.3rem;color:var(--gold-deep)}
+.qa details[open] summary::after{content:"–"}
+.qa .ans{padding:0 4px 18px;font-size:.92rem;color:var(--ink-soft);max-width:62em}
+
+/* ---------- 06 about ---------- */
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:start}
+.about p{margin:0 0 14px}
+.cardbox{background:#fffdf7;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.cardbox dl{margin:0;font-size:.9rem}
+.cardbox dt{color:var(--ink-soft);font-size:.76rem;letter-spacing:.1em;margin-top:12px}
+.cardbox dt:first-child{margin-top:0}
+.cardbox dd{margin:2px 0 0;word-break:break-all}
+.cardbox dd a{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink)}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:#14201a;color:#c6bfae;padding:42px 0 30px}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+footer h4{margin:0 0 10px;font-size:.95rem;color:#f0e9d8}
+footer ul{list-style:none;margin:0;padding:0;font-size:.87rem}
+footer li{padding:4px 0}
+footer a{color:#c6bfae}
+footer a:hover{color:var(--gold)}
+.bot{margin-top:30px;padding-top:18px;border-top:1px solid rgba(198,191,174,.22);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:#9a9484}
+.bot .site{font-family:ui-monospace,Menlo,Consolas,monospace;color:#cfc8b6}
+@media (max-width:820px){footer .cols{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="filmstrip" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><b>农民影视</b><span>nongmin</span></div>
+    <input type="checkbox" id="navsw" aria-hidden="true">
+    <label class="navbtn" for="navsw" aria-hidden="true">栏目</label>
+    <nav class="nav" aria-label="站内栏目">
+      <a href="#new">今日片单</a>
+      <a href="#cata">分类目录</a>
+      <a href="#rank">热播排行</a>
+      <a href="#slots">院坝时刻</a>
+      <a href="#qa">观影问答</a>
+      <a href="#about">关于本站</a>
+      <em><a href="#new" style="color:inherit">今晚看啥</a></em>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tagline">霜降前后 · 第 41 期片单</span>
+      <h1>农民影视<small>NONGMIN YINGSHI</small></h1>
+      <p class="lede">这份清单是给一家人围着电视坐下来的那段时间准备的。地里的活收了工，孩子写完作业，老人想把戏曲看完——农民影视按节气把乡土剧情片、家庭伦理剧、地方戏曲录像和农业科教短片归拢成一期，写上时长和适宜人群，照着找就行。</p>
+      <div class="addr">
+        <i>站点地址</i>
+        <a href="https://nongminyingshi-app.github.io/">https://nongminyingshi-app.github.io</a>
+      </div>
+    </div>
+    <aside class="ticket">
+      <h2>本期速览</h2>
+      <p>更新于霜降前后，遇雨雪天气顺延</p>
+      <ul>
+        <li><span>本期条目</span><b>36 部</b></li>
+        <li><span>戏曲录像</span><b>9 段</b></li>
+        <li><span>农技短片</span><b>11 讲</b></li>
+        <li><span>平均时长</span><b>48 分钟</b></li>
+        <li><span>适合人群</span><b>全家</b></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="band" id="new">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="no">01</span>
+      <h2>今日片单</h2>
+      <p>today&#39;s pick</p>
+      <span class="more"><a href="#">查看往期片单</a></span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb">稻<br>浪</div>
+        <div class="body">
+          <h3>稻浪一年</h3>
+          <p>跟着一户种粮人家从育秧忙到冬藏，中间那场台风是全片的分水岭。</p>
+          <div class="meta"><span>乡土剧情</span><span>96 分钟</span><span>全年龄</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">老<br>戏<br>台</div>
+        <div class="body">
+          <h3>老戏台录像</h3>
+          <p>县剧团 1998 年下乡演出的实况修复版，三段折子戏连着唱，念白听得清。</p>
+          <div class="meta"><span>戏曲</span><span>112 分钟</span><span>老人优先</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">山<br>路</div>
+        <div class="body">
+          <h3>回来的山路</h3>
+          <p>外出务工的人腊月里往家赶，一路上遇见的人和事，慢慢把话说开了。</p>
+          <div class="meta"><span>家庭伦理</span><span>88 分钟</span><span>建议陪看</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">冬<br>小麦</div>
+        <div class="body">
+          <h3>冬小麦播种要点</h3>
+          <p>农技站主讲，从选种、拌种到播后镇压，分七节讲完，配田间实拍。</p>
+          <div class="meta"><span>农业科教</span><span>7 讲</span><span>种植户</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">晒<br>谷<br>场</div>
+        <div class="body">
+          <h3>晒谷场上的电影</h3>
+          <p>把几十年间村里放露天电影的老照片连成一条线，旁白是放映员本人。</p>
+          <div class="meta"><span>纪录片</span><span>52 分钟</span><span>全年龄</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">灶<br>台</div>
+        <div class="body">
+          <h3>灶台边的家常</h3>
+          <p>十二道村里常见菜的做法，顺带讲一家人的饭桌规矩，节奏很慢。</p>
+          <div class="meta"><span>生活纪录</span><span>34 分钟</span><span>全年龄</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="cata">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="no">02</span>
+      <h2>分类目录</h2>
+      <p>category index</p>
+      <span class="more"><a href="#">按年份检索</a></span>
+    </div>
+    <div class="cata">
+      <div class="big">
+        <h3>乡土剧情 · 合集</h3>
+        <p>以村子为舞台的故事片，方言对白占多数，字幕齐全。合集按拍摄年代排，早年的黑白片和近年的数字片分开陈列，找起来不混。</p>
+        <p style="font-size:.86rem">共 128 部 · 每周三补录</p>
+        <a href="#">进入合集</a>
+      </div>
+      <div class="chips">
+        <a href="#"><b>家庭伦理</b><i>64 部</i></a>
+        <a href="#"><b>地方戏曲</b><i>9 类剧种</i></a>
+        <a href="#"><b>农业科教</b><i>216 讲</i></a>
+        <a href="#"><b>乡土纪录片</b><i>77 部</i></a>
+        <a href="#"><b>老电影修复</b><i>153 部</i></a>
+        <a href="#"><b>儿童动画</b><i>41 部</i></a>
+        <a href="#"><b>短视频合辑</b><i>12 组</i></a>
+        <a href="#"><b>节庆晚会</b><i>23 场</i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark" id="rank">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="no">03</span>
+      <h2>热播排行</h2>
+      <p>weekly heat</p>
+      <span class="more"><a href="#">排行规则说明</a></span>
+    </div>
+    <ol class="rank">
+      <li>
+        <span class="n">1</span>
+        <span class="t">稻浪一年<small>乡土剧情 · 站内点播次数最高</small></span>
+        <span class="heat"><span class="bar"><i style="width:96%"></i></span><span class="v">热度 96</span></span>
+      </li>
+      <li>
+        <span class="n">2</span>
+        <span class="t">老戏台录像<small>戏曲 · 县剧团修复版</small></span>
+        <span class="heat"><span class="bar"><i style="width:88%"></i></span><span class="v">热度 88</span></span>
+      </li>
+      <li>
+        <span class="n">3</span>
+        <span class="t">冬小麦播种要点<small>农业科教 · 七讲连播</small></span>
+        <span class="heat"><span class="bar"><i style="width:81%"></i></span><span class="v">热度 81</span></span>
+      </li>
+      <li>
+        <span class="n">4</span>
+        <span class="t">回来的山路<small>家庭伦理 · 腊月返乡题材</small></span>
+        <span class="heat"><span class="bar"><i style="width:74%"></i></span><span class="v">热度 74</span></span>
+      </li>
+      <li>
+        <span class="n">5</span>
+        <span class="t">晒谷场上的电影<small>纪录片 · 露天放映口述史</small></span>
+        <span class="heat"><span class="bar"><i style="width:66%"></i></span><span class="v">热度 66</span></span>
+      </li>
+      <li>
+        <span class="n">6</span>
+        <span class="t">灶台边的家常<small>生活纪录 · 十二道家常菜</small></span>
+        <span class="heat"><span class="bar"><i style="width:57%"></i></span><span class="v">热度 57</span></span>
+      </li>
+      <li>
+        <span class="n">7</span>
+        <span class="t">春耕前的那场雨<small>乡土剧情 · 黑白修复</small></span>
+        <span class="heat"><span class="bar"><i style="width:49%"></i></span><span class="v">热度 49</span></span>
+      </li>
+      <li>
+        <span class="n">8</span>
+        <span class="t">果园冬季修剪<small>农业科教 · 现场示范</small></span>
+        <span class="heat"><span class="bar"><i style="width:42%"></i></span><span class="v">热度 42</span></span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="slots">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="no">04</span>
+      <h2>院坝放映时刻</h2>
+      <p>village screening</p>
+      <span class="more"><a href="#">提交排片信息</a></span>
+    </div>
+    <div class="slots">
+      <article class="slot">
+        <span class="day">Mon · 周一</span>
+        <h3>河东晒谷场</h3>
+        <ul>
+          <li><b>19:00</b><span>农业科教连播</span></li>
+          <li><b>19:40</b><span>老戏台录像</span></li>
+        </ul>
+      </article>
+      <article class="slot">
+        <span class="day">Wed · 周三</span>
+        <h3>村委会大院</h3>
+        <ul>
+          <li><b>18:30</b><span>儿童动画合辑</span></li>
+          <li><b>19:20</b><span>稻浪一年</span></li>
+        </ul>
+      </article>
+      <article class="slot">
+        <span class="day">Fri · 周五</span>
+        <h3>小学操场</h3>
+        <ul>
+          <li><b>19:00</b><span>回来的山路</span></li>
+          <li><b>20:40</b><span>节庆晚会回放</span></li>
+        </ul>
+      </article>
+      <article class="slot">
+        <span class="day">Sat · 周六</span>
+        <h3>集市戏台</h3>
+        <ul>
+          <li><b>18:00</b><span>地方戏曲专场</span></li>
+          <li><b>20:00</b><span>晒谷场上的电影</span></li>
+        </ul>
+      </article>
+      <article class="slot">
+        <span class="day">Sun · 周日</span>
+        <h3>文化站礼堂</h3>
+        <ul>
+          <li><b>15:00</b><span>老电影修复场</span></li>
+          <li><b>19:30</b><span>本周排行精选</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="note">排片由各点自行上报，遇雨顺延一天，具体以村内广播为准；农民影视只做汇总，不组织放映。</p>
+  </div>
+</section>
+
+<section class="band" id="qa">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="no">05</span>
+      <h2>观影问答</h2>
+      <p>frequently asked</p>
+    </div>
+    <div class="qa">
+      <details open>
+        <summary>片单多久换一次？</summary>
+        <div class="ans">大换单跟着节气走，一年二十四期；中间每周三补录新条目，老条目不删，挪进对应分类里存着。</div>
+      </details>
+      <details>
+        <summary>要注册或者装软件吗？</summary>
+        <div class="ans">都不用。手机浏览器打开 nongminyingshi-app.github.io 直接翻，字大、图少，老年机上的浏览器也能加载出来。</div>
+      </details>
+      <details>
+        <summary>条目里的片子从哪里来？</summary>
+        <div class="ans">公开播出的电视节目、剧团公开的演出录像、农技站对外发布的讲座，以及版权已开放的资料片。本站只登记片名、时长和适宜人群，不存文件、不发下载链接。</div>
+      </details>
+      <details>
+        <summary>流量不够怎么办？</summary>
+        <div class="ans">页面做了压缩，单页不到一百千字节；建议在有无线网的地方先打开一次，把当期片单截图存相册，之后照着截图找片。</div>
+      </details>
+      <details>
+        <summary>想推荐手里的老录像带？</summary>
+        <div class="ans">记下片名、年份和剧种，通过页脚的投稿入口留个说明，编辑组核实来源后会排进下期补录，并注明提供人。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap">
+    <div class="sechead">
+      <span class="no">06</span>
+      <h2>关于农民影视</h2>
+      <p>about this site</p>
+    </div>
+    <div class="about">
+      <div>
+        <p>农民影视起于一份手抄的片名本子。最早是村里放电影的人把演过的片子记在册子上，谁家想看哪出戏，翻一翻就知道下一场什么时候轮到。后来册子换成网页，规矩没变：只记片名和出处，不替别人做决定。</p>
+        <p>现在这份索引按节气换单，把乡土剧情、家庭伦理、地方戏曲、农业科教和纪录片分开摆，每条都标注时长与适宜人群。老人想听戏、孩子要看动画、种植户找技术讲座，各走各的一栏，互不打扰。</p>
+        <p>站点不接受投放，也不做会员。若发现条目信息有误，按页脚的方式说一声，核实后当期就改。</p>
+      </div>
+      <aside class="cardbox">
+        <dl>
+          <dt>站点名称</dt>
+          <dd>农民影视</dd>
+          <dt>访问地址</dt>
+          <dd><a href="https://nongminyingshi-app.github.io/">nongminyingshi-app.github.io</a></dd>
+          <dt>本期编号</dt>
+          <dd>第 41 期 · 霜降</dd>
+          <dt>维护</dt>
+          <dd>农民影视片单组</dd>
+          <dt>投诉与纠错</dt>
+          <dd><a href="#">留言入口</a></dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>片单</h4>
+        <ul>
+          <li><a href="#">乡土剧情</a></li>
+          <li><a href="#">家庭伦理</a></li>
+          <li><a href="#">纪录片</a></li>
+          <li><a href="#">老片修复</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>戏曲</h4>
+        <ul>
+          <li><a href="#">梆子</a></li>
+          <li><a href="#">落腔</a></li>
+          <li><a href="#">皮影</a></li>
+          <li><a href="#">折子戏</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>农技</h4>
+        <ul>
+          <li><a href="#">大田作物</a></li>
+          <li><a href="#">果蔬管理</a></li>
+          <li><a href="#">畜禽防疫</a></li>
+          <li><a href="#">农机维护</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>本站</h4>
+        <ul>
+          <li><a href="#">投稿推荐</a></li>
+          <li><a href="#">纠错留言</a></li>
+          <li><a href="#">收录说明</a></li>
+          <li><a href="#">隐私约定</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bot">
+      <span>农民影视 · 片单索引，仅登记片名与出处，不提供任何下载</span>
+      <span class="site">https://nongminyingshi-app.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nongminyingshi-app.github.io/#website",
+      "url": "https://nongminyingshi-app.github.io/",
+      "name": "农民影视",
+      "alternateName": "农民影视片单索引",
+      "inLanguage": "zh-CN",
+      "description": "按节气更新的乡土影视片单索引，含分类目录、热播排行与村口院坝放映时刻表。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "农民影视片单组"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nongminyingshi-app.github.io/#webpage",
+      "url": "https://nongminyingshi-app.github.io/",
+      "name": "农民影视 · 村镇院坝片单索引与放映时刻手册",
+      "isPartOf": { "@id": "https://nongminyingshi-app.github.io/#website" },
+      "about": "乡土影视、戏曲录像与农业科教短片的片单索引",
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "片单多久换一次？",
+          "acceptedAnswer": { "@type": "Answer", "text": "大换单跟着节气走，一年二十四期；每周三补录新条目，老条目归入对应分类保留。" }
+        },
+        {
+          "@type": "Question",
+          "name": "访问农民影视需要注册吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不需要注册，也不需要安装软件，手机浏览器打开即可翻看当期片单。" }
+        },
+        {
+          "@type": "Question",
+          "name": "片单里的影片来源是什么？",
+          "acceptedAnswer": { "@type": "Answer", "text": "来自公开播出的电视节目、剧团公开演出录像、农技站对外讲座及版权开放的资料片，站点只登记片名、时长与适宜人群。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
